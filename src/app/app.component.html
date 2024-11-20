@@ -3,9 +3,11 @@
 </mat-toolbar>
 
 <nav>
-  <button mat-button routerLink="/verificar" routerLinkActive="active">Verificar Festivo</button>
-  <button mat-button routerLink="/listar" routerLinkActive="active">Listar Festivos</button>
+  <button mat-button (click)="navigateTo('verificar')">Verificar Festivo</button>
+  <button mat-button (click)="navigateTo('listar')">Listar Festivos</button>
 </nav>
+
+
 
 <mat-divider></mat-divider>
 
