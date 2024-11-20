@@ -12,7 +12,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
   templateUrl: './listar-festivos.component.html',
   styleUrls: ['./listar-festivos.component.css'],
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, FormsModule, NgxDatatableModule],
+  imports: [ MatFormFieldModule, MatInputModule, FormsModule, NgxDatatableModule],
 })
 export class ListarFestivosComponent {
   anio: number = new Date().getFullYear();
@@ -22,7 +22,12 @@ export class ListarFestivosComponent {
 
   obtenerFestivos() {
     this.festivosService.obtenerFestivos(this.anio).subscribe((data) => {
-      this.festivos = data;
+      console.log('Datos obtenidos:', data); // Inspeccionar aquí
+      this.festivos = data.map((festivo) => ({
+        nombre: festivo.nombre,
+        fecha: festivo.fecha.split('T')[0], // Formatear la fecha
+      }));
+      console.log('Datos formateados para la tabla:', this.festivos);
     });
   }
 }

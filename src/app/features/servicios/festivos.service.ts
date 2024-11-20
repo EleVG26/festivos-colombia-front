@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Festivo } from '../../core/entidades/festivo';
+import { environment } from '../../../environments/environment';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class FestivosService {
-  private apiUrl = 'http://localhost:8080/festivos'; // Cambiar si es necesario
+  private apiUrl = `${environment.apiBaseUrl}/festivos`; // Cambiar si es necesario
 
   constructor(private http: HttpClient) {}
 

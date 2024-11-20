@@ -1,10 +1,24 @@
 <div class="container">
-    <h2>Lista de Festivos</h2>
-    <mat-form-field appearance="fill">
-      <mat-label>Año</mat-label>
-      <input matInput [(ngModel)]="anio" type="number" />
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="obtenerFestivos()">Obtener Festivos</button>
-    <ngx-datatable [rows]="festivos" [columns]="[{ prop: 'nombre' }, { prop: 'fecha' }]" class="material"></ngx-datatable>
-  </div>
+  <h2>Lista de Festivos</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Año</mat-label>
+    <input matInput [(ngModel)]="anio" type="number" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="obtenerFestivos()">Obtener Festivos</button>
+
   
+  <ngx-datatable
+  class="material centered"
+  [rows]="festivos"
+  [columns]="[
+    { prop: 'nombre', name: 'Nombre', width: 200 }, 
+    { prop: 'fecha', name: 'Fecha', width: 150 }
+  ]"
+  [headerHeight]="50"
+  [footerHeight]="0"
+  [rowHeight]="50"
+  [columnMode]="'force'"
+  [limit]="10"
+  [scrollbarV]="true">
+</ngx-datatable>
+</div>
