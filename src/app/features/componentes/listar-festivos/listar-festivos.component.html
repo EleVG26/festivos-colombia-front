@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Lista de Festivos</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Año</mat-label>
+      <input matInput [(ngModel)]="anio" type="number" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="obtenerFestivos()">Obtener Festivos</button>
+    <ngx-datatable [rows]="festivos" [columns]="[{ prop: 'nombre' }, { prop: 'fecha' }]" class="material"></ngx-datatable>
+  </div>
+  
