@@ -1,5 +1,5 @@
 export interface Festivo {
-    nombre: string;
+    festivo: string;
     fecha: string; // Formato ISO (yyyy-MM-dd)
   }
   

@@ -82,3 +82,23 @@ button:hover {
   background-color: #ffd700; /* Un amarillo más claro al pasar el mouse */
   cursor: pointer;
 }
+
+.mat-calendar-body-cell:hover {
+  background-color: #0049b6 !important; /* Azul bandera */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+.mat-calendar-body-selected {
+  background-color: #0049b6 !important; /* Azul bandera */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+.empty-message {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 10px;
+  border-radius: 8px;
+}
