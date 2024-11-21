@@ -3,27 +3,23 @@
   }
   ngx-datatable {
     margin-top: 20px;
-    width: 70%; /* Ajusta el ancho de la tabla */
-    max-width: 600px; /* Ancho máximo */
+    width: 70%;
+    max-width: 600px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     height: 400px;
   }
   
   ngx-datatable.centered {
-    margin: 0 auto; /* Centra la tabla */
+    margin: 0 auto;
   }
   
   ngx-datatable .datatable-header {
-    background-color: #0049b6; /* Azul bandera */
+    background-color: #0049b6;
     color: white;
     font-weight: bold;
   }
   
-  ngx-datatable .datatable-footer {
-    background-color: #ffe800; /* Amarillo bandera */
-    color: black;
-  }
   
   ngx-datatable .datatable-row {
     background-color: #ffffff;
@@ -37,11 +33,11 @@
   }
 
   ngx-datatable ::ng-deep .datatable-body-cell {
-    text-align: center; /* Centra el texto en cada celda */
+    text-align: center;
   }
   
   ngx-datatable ::ng-deep .datatable-header-cell {
-    text-align: center; /* Centra el texto en los encabezados */
+    text-align: center;
     font-weight: bold;
   }
   

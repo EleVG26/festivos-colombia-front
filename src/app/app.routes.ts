@@ -6,5 +6,5 @@ export const routes: Routes = [
   { path: 'verificar', component: VerificarFestivoComponent },
   { path: 'listar', component: ListarFestivosComponent },
   { path: '', redirectTo: '/verificar', pathMatch: 'full' },
-  { path: '**', redirectTo: '/verificar' }// Ruta para listar festivos
+  { path: '**', redirectTo: '/verificar' }
 ];

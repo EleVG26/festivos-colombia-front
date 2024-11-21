@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(private router: Router) { }
   
   navigateTo(route: string): void {
-    this.router.navigate([`/${route}`]); // Navega a la ruta proporcionada
-    console.log(`Navegando a: ${route}`); // Opcional: imprime en consola
+    this.router.navigate([`/${route}`]);
+    console.log(`Navegando a: ${route}`);
   }
 }

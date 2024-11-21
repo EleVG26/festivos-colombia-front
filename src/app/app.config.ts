@@ -15,6 +15,6 @@ export const appConfig: ApplicationConfig = {
       FormsModule,
       ReferenciasMaterialModule
     ),
-    provideRouter(routes), // Configuración de rutas
+    provideRouter(routes),
   ],
 };

@@ -4,8 +4,8 @@ html, body {
   margin: 0;
   font-family: 'Roboto', "Helvetica Neue", sans-serif;
   background: url('assets/colombia-bg.jpg') no-repeat center center fixed;
-  background-size: cover; /* Degradado de amarillo, azul y rojo */
-  color: #fff; /* Texto blanco para destacar en los colores */
+  background-size: cover;
+  color: #fff;
 }
 
 /* Estilo para el toolbar */
@@ -81,4 +81,110 @@ button {
 button:hover {
   background-color: #ffd700; /* Un amarillo más claro al pasar el mouse */
   cursor: pointer;
+}
+
+.mat-calendar-body-cell:hover {
+  background-color: #0049b6 !important; /* Azul bandera */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+.mat-calendar-body-selected {
+  background-color: #0049b6 !important; /* Azul bandera */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+.empty-message {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Estilo general para los números de paginación */
+.ngx-datatable .datatable-footer .pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre los números */
+  list-style-type: none; /* Quitar los puntos de la lista */
+  padding: 0;
+  margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+
+.ngx-datatable .datatable-footer .pager li button,
+.ngx-datatable .datatable-footer .pager li a {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  text-decoration: none; /* Eliminar subrayado */
+}
+
+
+/* Ocultar los elementos adicionales (botones de salto) */
+.ngx-datatable .datatable-footer .datatable-pager li:not(.pages) {
+  display: none !important;
+}
+
+/* Estilo para los números de las páginas */
+.ngx-datatable .datatable-footer .datatable-pager li.pages {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Resaltar el botón activo */
+.ngx-datatable .datatable-footer .datatable-pager li.pages.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.ngx-datatable .datatable-body-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea fina y semitransparente */
+}
+
+.ngx-datatable .datatable-header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Línea más gruesa para el encabezado */
+}
+
+.ngx-datatable .datatable-row-group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea en caso de grupos */
+}
+
+.ngx-datatable .datatable-body-row:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.ngx-datatable {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ngx-datatable .datatable-body-cell {
+  font-size: 16px;
+  letter-spacing: 0.5px;
 }

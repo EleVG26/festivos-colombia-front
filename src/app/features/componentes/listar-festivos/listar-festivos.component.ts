@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FestivosService } from '../../servicios/festivos.service';
-import { Festivo } from '../../../core/entidades/festivo';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { ColumnMode, NgxDatatableModule, SelectionType } from '@swimlane/ngx-datatable';
+import { Festivo } from '../../../core/entidades/festivo';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -12,9 +13,11 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
   templateUrl: './listar-festivos.component.html',
   styleUrls: ['./listar-festivos.component.css'],
   standalone: true,
-  imports: [ MatFormFieldModule, MatInputModule, FormsModule, NgxDatatableModule],
+  imports: [ MatFormFieldModule, MatInputModule, FormsModule, NgxDatatableModule, CommonModule],
 })
 export class ListarFestivosComponent {
+  public modoColumna = ColumnMode;
+  
   anio: number = new Date().getFullYear();
   festivos: Festivo[] = [];
 
@@ -24,7 +27,7 @@ export class ListarFestivosComponent {
     this.festivosService.obtenerFestivos(this.anio).subscribe((data) => {
       console.log('Datos obtenidos:', data); // Inspeccionar aquí
       this.festivos = data.map((festivo) => ({
-        nombre: festivo.nombre,
+        festivo: festivo.festivo,
         fecha: festivo.fecha.split('T')[0], // Formatear la fecha
       }));
       console.log('Datos formateados para la tabla:', this.festivos);

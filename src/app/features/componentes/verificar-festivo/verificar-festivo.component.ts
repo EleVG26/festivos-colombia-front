@@ -21,14 +21,13 @@ export class VerificarFestivoComponent {
 
   verificarFecha() {
     if (this.fecha) {
-      // Extraer año, mes y día de la fecha seleccionada
       const anio = this.fecha.getFullYear();
-      const mes = this.fecha.getMonth() + 1; // Los meses en JavaScript comienzan en 0
+      const mes = this.fecha.getMonth() + 1;
       const dia = this.fecha.getDate();
 
       this.festivosService.verificarFestivo(anio, mes, dia).subscribe((res) => {
         this.resultado = res;
-        alert(this.resultado); // Mostrar resultado en un popup
+        alert(this.resultado);
       });
     } else {
       alert('Por favor selecciona una fecha válida.');
