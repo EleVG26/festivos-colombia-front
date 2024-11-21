@@ -8,17 +8,17 @@
 
   
   <ngx-datatable
+  *ngIf="festivos && festivos.length > 0"
   class="material centered"
   [rows]="festivos"
   [columns]="[
-    { prop: 'festivo', name: 'Festivo', width: 200 }, 
+    { prop: 'festivo', name: 'Festivo', width: 150 }, 
     { prop: 'fecha', name: 'Fecha', width: 150 }
   ]"
   [headerHeight]="50"
-  [footerHeight]="0"
-  [rowHeight]="50"
-  [columnMode]="'force'"
-  [limit]="10"
-  [scrollbarV]="true">
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [columnMode]="modoColumna.force"
+  [limit]="10">
 </ngx-datatable>
 </div>

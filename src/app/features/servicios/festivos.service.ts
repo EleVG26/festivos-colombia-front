@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class FestivosService {
-  private apiUrl = `${environment.apiBaseUrl}/festivos`; // Cambiar si es necesario
+  private apiUrl = `${environment.apiBaseUrl}/festivos`;
 
   constructor(private http: HttpClient) {}
 

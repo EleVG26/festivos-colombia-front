@@ -3,8 +3,9 @@ import { FestivosService } from '../../servicios/festivos.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { ColumnMode, NgxDatatableModule, SelectionType } from '@swimlane/ngx-datatable';
 import { Festivo } from '../../../core/entidades/festivo';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -12,9 +13,11 @@ import { Festivo } from '../../../core/entidades/festivo';
   templateUrl: './listar-festivos.component.html',
   styleUrls: ['./listar-festivos.component.css'],
   standalone: true,
-  imports: [ MatFormFieldModule, MatInputModule, FormsModule, NgxDatatableModule],
+  imports: [ MatFormFieldModule, MatInputModule, FormsModule, NgxDatatableModule, CommonModule],
 })
 export class ListarFestivosComponent {
+  public modoColumna = ColumnMode;
+  
   anio: number = new Date().getFullYear();
   festivos: Festivo[] = [];
 

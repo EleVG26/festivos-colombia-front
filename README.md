@@ -2,57 +2,33 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
 
-## Development server
+**FestivosColombia** es una aplicación desarrollada con Angular que permite consultar los días festivos en Colombia de acuerdo a un año ingresado y verificar si una fecha específica es un día festivo.
 
-To start a local development server, run:
+## Funcionalidades
+
+- **Consulta de festivos por año**: Muestra una lista paginada de los festivos para el año seleccionado.
+- **Verificación de festivo**: Permite ingresar una fecha y valida si corresponde a un festivo.
+- **Diseño amigable**: Utiliza Angular Material y un diseño responsivo para mejorar la experiencia de usuario.
+- **Interacción con API REST**: Consume un backend desarrollado con Spring Boot para obtener datos dinámicos.
+
+---
+
+### Prerrequisitos
+
+Asegúrate de tener instalados los siguientes programas:
+
+- [Node.js](https://nodejs.org/) (versión 16 o superior)
+- [Angular CLI](https://angular.io/cli) (versión 15 o superior)
+
+## Servidor de Desarrollo
+
+Para iniciar un servidor local de desarrollo, ejecuta:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Una vez que el servidor esté en funcionamiento, abre tu navegador y navega a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que modifiques uno de los archivos fuente.
 
 ## Additional Resources
 
